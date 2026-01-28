@@ -4,6 +4,7 @@ import { McpTool, Metadata, ToolCallResult, asErrorResult, asTextContentResult }
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import { readEnv, readEnvOrError } from './server';
 import { WorkerInput, WorkerOutput } from './code-tool-types';
+import { YolkenTest6 } from 'yolken-test6';
 
 const prompt = `Runs JavaScript code to interact with the Yolken Test6 API.
 
@@ -58,7 +59,7 @@ export function codeTool(): McpTool {
       required: ['code'],
     },
   };
-  const handler = async (_: unknown, args: any): Promise<ToolCallResult> => {
+  const handler = async (client: YolkenTest6, args: any): Promise<ToolCallResult> => {
     const code = args.code as string;
     const intent = args.intent as string | undefined;
 
@@ -74,8 +75,8 @@ export function codeTool(): McpTool {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
-          PETSTORE_API_KEY: readEnvOrError('PETSTORE_API_KEY'),
-          YOLKEN_TEST6_BASE_URL: readEnv('YOLKEN_TEST6_BASE_URL'),
+          PETSTORE_API_KEY: readEnvOrError('PETSTORE_API_KEY') ?? client.apiKey ?? undefined,
+          YOLKEN_TEST6_BASE_URL: readEnv('YOLKEN_TEST6_BASE_URL') ?? client.baseURL ?? undefined,
         }),
       },
       body: JSON.stringify({
