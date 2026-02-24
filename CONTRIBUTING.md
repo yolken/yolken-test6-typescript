@@ -60,7 +60,7 @@ $ yarn link yolken-test6
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global yolken-test6
+$ pnpm link --global yolken-test6
 ```
 
 ## Running tests
