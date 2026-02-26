@@ -11,7 +11,7 @@
     "url": "git+https://github.com/stainless-sdks/yolken-test6-typescript.git"
   },
   "homepage": "https://github.com/stainless-sdks/yolken-test6-typescript/tree/main/packages/mcp-server#readme",
-  "documentation": "http://example14.com",
+  "documentation": "http://example15.com",
   "server": {
     "type": "node",
     "entry_point": "index.js",
