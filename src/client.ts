@@ -737,8 +737,17 @@ export class YolkenTest6 {
 
   static toFile = Uploads.toFile;
 
+  /**
+   * Everything about your Pets
+   */
   pets: API.Pets = new API.Pets(this);
+  /**
+   * Access to Petstore orders
+   */
   store: API.Store = new API.Store(this);
+  /**
+   * Operations about user
+   */
   users: API.Users = new API.Users(this);
 }
 
