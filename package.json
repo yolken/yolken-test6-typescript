@@ -2,7 +2,7 @@
   "name": "yolken-test6",
   "version": "0.0.1",
   "description": "The official TypeScript library for the Yolken Test6 API",
-  "author": "Yolken Test6 <>",
+  "author": "Yolken Test6 <benjamin2@stainless.com>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",

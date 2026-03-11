@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "description": "The official MCP Server for the Yolken Test6 API",
   "author": {
-    "name": "Yolken Test6"
+    "name": "Yolken Test6",
+    "email": "benjamin2@stainless.com"
   },
   "repository": {
     "type": "git",
