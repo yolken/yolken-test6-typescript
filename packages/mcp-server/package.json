@@ -2,7 +2,7 @@
   "name": "yolken-test6-mcp",
   "version": "0.0.1",
   "description": "The official MCP Server for the Yolken Test6 API",
-  "author": "Yolken Test6 <benjamin@stainless.com>",
+  "author": "Yolken Test6 <benjamin2@stainless.com>",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "type": "commonjs",

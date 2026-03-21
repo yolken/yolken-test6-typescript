@@ -5,14 +5,14 @@
   "description": "The official MCP Server for the Yolken Test6 API",
   "author": {
     "name": "Yolken Test6",
-    "email": "benjamin@stainless.com"
+    "email": "benjamin2@stainless.com"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stainless-sdks/yolken-test6-typescript.git"
   },
   "homepage": "https://github.com/stainless-sdks/yolken-test6-typescript/tree/main/packages/mcp-server#readme",
-  "documentation": "http://example15.com",
+  "documentation": "http://example16.com",
   "server": {
     "type": "node",
     "entry_point": "index.js",
