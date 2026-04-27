@@ -42,16 +42,8 @@ export class Users extends APIResource {
    * await client.users.update('username');
    * ```
    */
-  update(
-    existingUsername: string,
-    body: UserUpdateParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<void> {
-    return this._client.put(path`/user/${existingUsername}`, {
-      body,
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-    });
+  update(existingUsername: string, body: UserUpdateParams | null | undefined = {}, options?: RequestOptions): APIPromise<void> {
+    return this._client.put(path`/user/${existingUsername}`, { body, ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]) });
   }
 
   /**
@@ -63,10 +55,7 @@ export class Users extends APIResource {
    * ```
    */
   delete(username: string, options?: RequestOptions): APIPromise<void> {
-    return this._client.delete(path`/user/${username}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-    });
+    return this._client.delete(path`/user/${username}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]) });
   }
 
   /**
@@ -77,11 +66,8 @@ export class Users extends APIResource {
    * const user = await client.users.createWithList();
    * ```
    */
-  createWithList(
-    params: UserCreateWithListParams | null | undefined = undefined,
-    options?: RequestOptions,
-  ): APIPromise<User> {
-    const { items } = params ?? {};
+  createWithList(params: UserCreateWithListParams | null | undefined = undefined, options?: RequestOptions): APIPromise<User> {
+    const { items } = params ?? {}
     return this._client.post('/user/createWithList', { body: items, ...options });
   }
 
@@ -106,10 +92,7 @@ export class Users extends APIResource {
    * ```
    */
   logout(options?: RequestOptions): APIPromise<void> {
-    return this._client.get('/user/logout', {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-    });
+    return this._client.get('/user/logout', { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]) });
   }
 }
 
@@ -134,7 +117,7 @@ export interface User {
   userStatus?: number;
 }
 
-export type UserLoginResponse = string;
+export type UserLoginResponse = string
 
 export interface UserCreateParams {
   id?: number;
@@ -201,6 +184,6 @@ export declare namespace Users {
     type UserCreateParams as UserCreateParams,
     type UserUpdateParams as UserUpdateParams,
     type UserCreateWithListParams as UserCreateWithListParams,
-    type UserLoginParams as UserLoginParams,
+    type UserLoginParams as UserLoginParams
   };
 }

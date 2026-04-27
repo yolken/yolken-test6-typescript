@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { ClientOptions } from 'yolken-test6';
+import { ClientOptions } from 'yolken-test6'
 
 export type WorkerInput = {
   project_name: string;

@@ -59,8 +59,8 @@ function getTSDiagnostics(code: string): string[] {
   const codeWithImport = [
     'import { YolkenTest6 } from "yolken-test6";',
     functionSource.type === 'declaration' ?
-      `async function run(${functionSource.client}: YolkenTest6)`
-    : `const run: (${functionSource.client}: YolkenTest6) => Promise<unknown> =`,
+      `async function run(${functionSource.client}: YolkenTest6)` :
+      `const run: (${functionSource.client}: YolkenTest6) => Promise<unknown> =`,
     functionSource.code,
   ].join('\n');
   const sourcePath = path.resolve('code.ts');
@@ -108,25 +108,25 @@ function getTSDiagnostics(code: string): string[] {
 
 const fuse = new Fuse(
   [
-    'client.pets.create',
-    'client.pets.delete',
-    'client.pets.findByStatus',
-    'client.pets.findByTags',
-    'client.pets.retrieve',
-    'client.pets.update',
-    'client.pets.updateByID',
-    'client.pets.uploadImage',
-    'client.store.listInventory',
-    'client.store.orders.create',
-    'client.store.orders.delete',
-    'client.store.orders.retrieve',
-    'client.users.create',
-    'client.users.createWithList',
-    'client.users.delete',
-    'client.users.login',
-    'client.users.logout',
-    'client.users.retrieve',
-    'client.users.update',
+    "client.pets.create",
+    "client.pets.delete",
+    "client.pets.findByStatus",
+    "client.pets.findByTags",
+    "client.pets.retrieve",
+    "client.pets.update",
+    "client.pets.updateByID",
+    "client.pets.uploadImage",
+    "client.store.listInventory",
+    "client.store.orders.create",
+    "client.store.orders.delete",
+    "client.store.orders.retrieve",
+    "client.users.create",
+    "client.users.createWithList",
+    "client.users.delete",
+    "client.users.login",
+    "client.users.logout",
+    "client.users.retrieve",
+    "client.users.update"
   ],
   { threshold: 1, shouldSort: true },
 );
@@ -209,12 +209,7 @@ function parseError(code: string, error: unknown): string | undefined {
     // Deno uses V8; the first "<anonymous>:LINE:COLUMN" is the top of stack.
     const lineNumber = error.stack?.match(/<anonymous>:([0-9]+):[0-9]+/)?.[1];
     // -1 for the zero-based indexing
-    const line =
-      lineNumber &&
-      code
-        .split('\n')
-        .at(parseInt(lineNumber, 10) - 1)
-        ?.trim();
+    const line = lineNumber && code.split('\n').at(parseInt(lineNumber, 10) - 1)?.trim();
     return line ? `${message}\n  at line ${lineNumber}\n    ${line}` : message;
   } catch {
     return message;
@@ -226,9 +221,8 @@ const fetch = async (req: Request): Promise<Response> => {
 
   const runFunctionSource = code ? getRunFunctionSource(code) : null;
   if (!runFunctionSource) {
-    const message =
-      code ?
-        'The code is missing a top-level `run` function.'
+    const message = code
+      ? 'The code is missing a top-level `run` function.'
       : 'The code argument is missing. Provide one containing a top-level `run` function.';
     return Response.json(
       {
@@ -273,7 +267,7 @@ const fetch = async (req: Request): Promise<Response> => {
   try {
     let run_ = async (client: any) => {};
     run_ = (await tseval(`${code}\nexport default run;`)).default;
-    const result = await run_(makeSdkProxy(client, { path: ['client'] }));
+    const result = await run_(makeSdkProxy(client, { path: ["client"] }));
     return Response.json({
       is_error: false,
       result,

@@ -20,7 +20,7 @@ or products provided by Yolken Test6, please follow the respective company's sec
 
 ### Yolken Test6 Terms and Policies
 
-Please contact benjamin2@stainless.com for any questions or concerns regarding the security of our services.
+Please contact benjamin3@stainless.com for any questions or concerns regarding the security of our services.
 
 ---
 
