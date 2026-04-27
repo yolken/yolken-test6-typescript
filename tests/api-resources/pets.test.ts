@@ -2,10 +2,7 @@
 
 import YolkenTest6, { toFile } from 'yolken-test6';
 
-const client = new YolkenTest6({
-  apiKey: 'My API Key',
-  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
-});
+const client = new YolkenTest6({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
 
 describe('resource pets', () => {
   // Mock server tests are disabled
@@ -23,13 +20,13 @@ describe('resource pets', () => {
   // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.pets.create({
-      name: 'doggie',
-      photoUrls: ['string'],
-      id: 10,
-      category: { id: 1, name: 'Dogs' },
-      status: 'available',
-      tags: [{ id: 0, name: 'name' }],
-    });
+    name: 'doggie',
+    photoUrls: ['string'],
+    id: 10,
+    category: { id: 1, name: 'Dogs' },
+    status: 'available',
+    tags: [{ id: 0, name: 'name' }],
+  });
   });
 
   // Mock server tests are disabled
@@ -59,13 +56,13 @@ describe('resource pets', () => {
   // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.pets.update({
-      name: 'doggie',
-      photoUrls: ['string'],
-      id: 10,
-      category: { id: 1, name: 'Dogs' },
-      status: 'available',
-      tags: [{ id: 0, name: 'name' }],
-    });
+    name: 'doggie',
+    photoUrls: ['string'],
+    id: 10,
+    category: { id: 1, name: 'Dogs' },
+    status: 'available',
+    tags: [{ id: 0, name: 'name' }],
+  });
   });
 
   // Mock server tests are disabled
@@ -95,9 +92,9 @@ describe('resource pets', () => {
   // Mock server tests are disabled
   test.skip('findByStatus: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.pets.findByStatus({ status: 'available' }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(YolkenTest6.NotFoundError);
+    await expect(client.pets.findByStatus({ status: 'available' }, { path: '/_stainless_unknown_path' }))
+      .rejects
+      .toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
@@ -115,9 +112,9 @@ describe('resource pets', () => {
   // Mock server tests are disabled
   test.skip('findByTags: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.pets.findByTags({ tags: ['string'] }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(YolkenTest6.NotFoundError);
+    await expect(client.pets.findByTags({ tags: ['string'] }, { path: '/_stainless_unknown_path' }))
+      .rejects
+      .toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
@@ -135,18 +132,14 @@ describe('resource pets', () => {
   // Mock server tests are disabled
   test.skip('updateByID: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(
-      client.pets.updateByID(0, { name: 'name', status: 'status' }, { path: '/_stainless_unknown_path' }),
-    ).rejects.toThrow(YolkenTest6.NotFoundError);
+    await expect(client.pets.updateByID(0, { name: 'name', status: 'status' }, { path: '/_stainless_unknown_path' }))
+      .rejects
+      .toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
   test.skip('uploadImage', async () => {
-    const responsePromise = client.pets.uploadImage(
-      0,
-      await toFile(Buffer.from('Example data'), 'README.md'),
-      {},
-    );
+    const responsePromise = client.pets.uploadImage(0, await toFile(Buffer.from('Example data'), 'README.md'), {});
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;

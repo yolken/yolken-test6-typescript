@@ -7,124 +7,104 @@ export type SdkMethod = {
   fullyQualifiedName: string;
   httpMethod?: 'get' | 'post' | 'put' | 'patch' | 'delete' | 'query';
   httpPath?: string;
-};
+}
 
-export const sdkMethods: SdkMethod[] = [
-  {
-    clientCallName: 'client.pets.create',
-    fullyQualifiedName: 'pets.create',
-    httpMethod: 'post',
-    httpPath: '/pet',
-  },
-  {
-    clientCallName: 'client.pets.retrieve',
-    fullyQualifiedName: 'pets.retrieve',
-    httpMethod: 'get',
-    httpPath: '/pet/{petId}',
-  },
-  {
-    clientCallName: 'client.pets.update',
-    fullyQualifiedName: 'pets.update',
-    httpMethod: 'put',
-    httpPath: '/pet',
-  },
-  {
-    clientCallName: 'client.pets.delete',
-    fullyQualifiedName: 'pets.delete',
-    httpMethod: 'delete',
-    httpPath: '/pet/{petId}',
-  },
-  {
-    clientCallName: 'client.pets.findByStatus',
-    fullyQualifiedName: 'pets.findByStatus',
-    httpMethod: 'get',
-    httpPath: '/pet/findByStatus',
-  },
-  {
-    clientCallName: 'client.pets.findByTags',
-    fullyQualifiedName: 'pets.findByTags',
-    httpMethod: 'get',
-    httpPath: '/pet/findByTags',
-  },
-  {
-    clientCallName: 'client.pets.updateByID',
-    fullyQualifiedName: 'pets.updateByID',
-    httpMethod: 'post',
-    httpPath: '/pet/{petId}',
-  },
-  {
-    clientCallName: 'client.pets.uploadImage',
-    fullyQualifiedName: 'pets.uploadImage',
-    httpMethod: 'post',
-    httpPath: '/pet/{petId}/uploadImage',
-  },
-  {
-    clientCallName: 'client.store.listInventory',
-    fullyQualifiedName: 'store.listInventory',
-    httpMethod: 'get',
-    httpPath: '/store/inventory',
-  },
-  {
-    clientCallName: 'client.store.orders.create',
-    fullyQualifiedName: 'store.orders.create',
-    httpMethod: 'post',
-    httpPath: '/store/order',
-  },
-  {
-    clientCallName: 'client.store.orders.retrieve',
-    fullyQualifiedName: 'store.orders.retrieve',
-    httpMethod: 'get',
-    httpPath: '/store/order/{orderId}',
-  },
-  {
-    clientCallName: 'client.store.orders.delete',
-    fullyQualifiedName: 'store.orders.delete',
-    httpMethod: 'delete',
-    httpPath: '/store/order/{orderId}',
-  },
-  {
-    clientCallName: 'client.users.create',
-    fullyQualifiedName: 'users.create',
-    httpMethod: 'post',
-    httpPath: '/user',
-  },
-  {
-    clientCallName: 'client.users.retrieve',
-    fullyQualifiedName: 'users.retrieve',
-    httpMethod: 'get',
-    httpPath: '/user/{username}',
-  },
-  {
-    clientCallName: 'client.users.update',
-    fullyQualifiedName: 'users.update',
-    httpMethod: 'put',
-    httpPath: '/user/{username}',
-  },
-  {
-    clientCallName: 'client.users.delete',
-    fullyQualifiedName: 'users.delete',
-    httpMethod: 'delete',
-    httpPath: '/user/{username}',
-  },
-  {
-    clientCallName: 'client.users.createWithList',
-    fullyQualifiedName: 'users.createWithList',
-    httpMethod: 'post',
-    httpPath: '/user/createWithList',
-  },
-  {
-    clientCallName: 'client.users.login',
-    fullyQualifiedName: 'users.login',
-    httpMethod: 'get',
-    httpPath: '/user/login',
-  },
-  {
-    clientCallName: 'client.users.logout',
-    fullyQualifiedName: 'users.logout',
-    httpMethod: 'get',
-    httpPath: '/user/logout',
-  },
-];
+export const sdkMethods: SdkMethod[] = [{
+  clientCallName: 'client.pets.create',
+  fullyQualifiedName: 'pets.create',
+  httpMethod: 'post',
+  httpPath: '/pet',
+},{
+  clientCallName: 'client.pets.retrieve',
+  fullyQualifiedName: 'pets.retrieve',
+  httpMethod: 'get',
+  httpPath: '/pet/{petId}',
+},{
+  clientCallName: 'client.pets.update',
+  fullyQualifiedName: 'pets.update',
+  httpMethod: 'put',
+  httpPath: '/pet',
+},{
+  clientCallName: 'client.pets.delete',
+  fullyQualifiedName: 'pets.delete',
+  httpMethod: 'delete',
+  httpPath: '/pet/{petId}',
+},{
+  clientCallName: 'client.pets.findByStatus',
+  fullyQualifiedName: 'pets.findByStatus',
+  httpMethod: 'get',
+  httpPath: '/pet/findByStatus',
+},{
+  clientCallName: 'client.pets.findByTags',
+  fullyQualifiedName: 'pets.findByTags',
+  httpMethod: 'get',
+  httpPath: '/pet/findByTags',
+},{
+  clientCallName: 'client.pets.updateByID',
+  fullyQualifiedName: 'pets.updateByID',
+  httpMethod: 'post',
+  httpPath: '/pet/{petId}',
+},{
+  clientCallName: 'client.pets.uploadImage',
+  fullyQualifiedName: 'pets.uploadImage',
+  httpMethod: 'post',
+  httpPath: '/pet/{petId}/uploadImage',
+},{
+  clientCallName: 'client.store.listInventory',
+  fullyQualifiedName: 'store.listInventory',
+  httpMethod: 'get',
+  httpPath: '/store/inventory',
+},{
+  clientCallName: 'client.store.orders.create',
+  fullyQualifiedName: 'store.orders.create',
+  httpMethod: 'post',
+  httpPath: '/store/order',
+},{
+  clientCallName: 'client.store.orders.retrieve',
+  fullyQualifiedName: 'store.orders.retrieve',
+  httpMethod: 'get',
+  httpPath: '/store/order/{orderId}',
+},{
+  clientCallName: 'client.store.orders.delete',
+  fullyQualifiedName: 'store.orders.delete',
+  httpMethod: 'delete',
+  httpPath: '/store/order/{orderId}',
+},{
+  clientCallName: 'client.users.create',
+  fullyQualifiedName: 'users.create',
+  httpMethod: 'post',
+  httpPath: '/user',
+},{
+  clientCallName: 'client.users.retrieve',
+  fullyQualifiedName: 'users.retrieve',
+  httpMethod: 'get',
+  httpPath: '/user/{username}',
+},{
+  clientCallName: 'client.users.update',
+  fullyQualifiedName: 'users.update',
+  httpMethod: 'put',
+  httpPath: '/user/{username}',
+},{
+  clientCallName: 'client.users.delete',
+  fullyQualifiedName: 'users.delete',
+  httpMethod: 'delete',
+  httpPath: '/user/{username}',
+},{
+  clientCallName: 'client.users.createWithList',
+  fullyQualifiedName: 'users.createWithList',
+  httpMethod: 'post',
+  httpPath: '/user/createWithList',
+},{
+  clientCallName: 'client.users.login',
+  fullyQualifiedName: 'users.login',
+  httpMethod: 'get',
+  httpPath: '/user/login',
+},{
+  clientCallName: 'client.users.logout',
+  fullyQualifiedName: 'users.logout',
+  httpMethod: 'get',
+  httpPath: '/user/logout',
+}];
 
 function allowedMethodsForCodeTool(options: McpOptions | undefined): SdkMethod[] | undefined {
   if (!options) {
@@ -139,9 +119,9 @@ function allowedMethodsForCodeTool(options: McpOptions | undefined): SdkMethod[]
 
     if (options.codeAllowHttpGets) {
       // Add all methods that map to an HTTP GET
-      sdkMethods
-        .filter((method) => method.httpMethod === 'get')
-        .forEach((method) => allowedMethodsSet.add(method));
+      sdkMethods.filter((method) => method.httpMethod === 'get').forEach(
+        (method) => allowedMethodsSet.add(method)
+      );
     }
 
     if (options.codeAllowedMethods) {
@@ -150,15 +130,13 @@ function allowedMethodsForCodeTool(options: McpOptions | undefined): SdkMethod[]
         try {
           return new RegExp(pattern);
         } catch (e) {
-          throw new Error(
-            `Invalid regex pattern for allowed method: "${pattern}": ${e instanceof Error ? e.message : e}`,
-          );
+          throw new Error(`Invalid regex pattern for allowed method: "${pattern}": ${e instanceof Error ? e.message : e}`);
         }
       });
 
-      sdkMethods
-        .filter((method) => allowedRegexps.some((regexp) => regexp.test(method.fullyQualifiedName)))
-        .forEach((method) => allowedMethodsSet.add(method));
+      sdkMethods.filter((method) =>
+          allowedRegexps.some((regexp) => regexp.test(method.fullyQualifiedName))
+        ).forEach((method) => allowedMethodsSet.add(method));
     }
 
     allowedMethods = Array.from(allowedMethodsSet);
@@ -173,14 +151,12 @@ function allowedMethodsForCodeTool(options: McpOptions | undefined): SdkMethod[]
       try {
         return new RegExp(pattern);
       } catch (e) {
-        throw new Error(
-          `Invalid regex pattern for blocked method: "${pattern}": ${e instanceof Error ? e.message : e}`,
-        );
+        throw new Error(`Invalid regex pattern for blocked method: "${pattern}": ${e instanceof Error ? e.message : e}`);
       }
     });
 
-    allowedMethods = allowedMethods.filter(
-      (method) => !blockedRegexps.some((regexp) => regexp.test(method.fullyQualifiedName)),
+    allowedMethods = allowedMethods.filter((method) =>
+      !blockedRegexps.some((regexp) => regexp.test(method.fullyQualifiedName))
     );
   }
 
