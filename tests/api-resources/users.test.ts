@@ -2,7 +2,10 @@
 
 import YolkenTest6 from 'yolken-test6';
 
-const client = new YolkenTest6({ apiKey: 'My API Key', baseURL: process.env["TEST_API_BASE_URL"] ?? 'http://127.0.0.1:4010' });
+const client = new YolkenTest6({
+  apiKey: 'My API Key',
+  baseURL: process.env['TEST_API_BASE_URL'] ?? 'http://127.0.0.1:4010',
+});
 
 describe('resource users', () => {
   // Mock server tests are disabled
@@ -20,18 +23,21 @@ describe('resource users', () => {
   // Mock server tests are disabled
   test.skip('create: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.users.create({
-    id: 10,
-    email: 'john@email.com',
-    firstName: 'John',
-    lastName: 'James',
-    password: '12345',
-    phone: '12345',
-    username: 'theUser',
-    userStatus: 1,
-  }, { path: '/_stainless_unknown_path' }))
-      .rejects
-      .toThrow(YolkenTest6.NotFoundError);
+    await expect(
+      client.users.create(
+        {
+          id: 10,
+          email: 'john@email.com',
+          firstName: 'John',
+          lastName: 'James',
+          password: '12345',
+          phone: '12345',
+          username: 'theUser',
+          userStatus: 1,
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
@@ -61,18 +67,22 @@ describe('resource users', () => {
   // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.users.update('username', {
-    id: 10,
-    email: 'john@email.com',
-    firstName: 'John',
-    lastName: 'James',
-    password: '12345',
-    phone: '12345',
-    username: 'theUser',
-    userStatus: 1,
-  }, { path: '/_stainless_unknown_path' }))
-      .rejects
-      .toThrow(YolkenTest6.NotFoundError);
+    await expect(
+      client.users.update(
+        'username',
+        {
+          id: 10,
+          email: 'john@email.com',
+          firstName: 'John',
+          lastName: 'James',
+          password: '12345',
+          phone: '12345',
+          username: 'theUser',
+          userStatus: 1,
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
@@ -102,18 +112,25 @@ describe('resource users', () => {
   // Mock server tests are disabled
   test.skip('createWithList: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.users.createWithList({ items: [{
-    id: 10,
-    email: 'john@email.com',
-    firstName: 'John',
-    lastName: 'James',
-    password: '12345',
-    phone: '12345',
-    username: 'theUser',
-    userStatus: 1,
-  }] }, { path: '/_stainless_unknown_path' }))
-      .rejects
-      .toThrow(YolkenTest6.NotFoundError);
+    await expect(
+      client.users.createWithList(
+        {
+          items: [
+            {
+              id: 10,
+              email: 'john@email.com',
+              firstName: 'John',
+              lastName: 'James',
+              password: '12345',
+              phone: '12345',
+              username: 'theUser',
+              userStatus: 1,
+            },
+          ],
+        },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
@@ -131,9 +148,12 @@ describe('resource users', () => {
   // Mock server tests are disabled
   test.skip('login: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
-    await expect(client.users.login({ password: 'password', username: 'username' }, { path: '/_stainless_unknown_path' }))
-      .rejects
-      .toThrow(YolkenTest6.NotFoundError);
+    await expect(
+      client.users.login(
+        { password: 'password', username: 'username' },
+        { path: '/_stainless_unknown_path' },
+      ),
+    ).rejects.toThrow(YolkenTest6.NotFoundError);
   });
 
   // Mock server tests are disabled
