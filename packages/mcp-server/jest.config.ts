@@ -10,9 +10,7 @@ const config: JestConfigWithTsJest = {
     '^yolken-test6-mcp$': '<rootDir>/src/index.ts',
     '^yolken-test6-mcp/(.*)$': '<rootDir>/src/$1',
   },
-  modulePathIgnorePatterns: [
-    '<rootDir>/dist/',
-  ],
+  modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testPathIgnorePatterns: ['scripts'],
 };
 

@@ -19,7 +19,10 @@ export class Orders extends APIResource {
    * const order = await client.store.orders.create();
    * ```
    */
-  create(body: OrderCreateParams | null | undefined = {}, options?: RequestOptions): APIPromise<Shared.Order> {
+  create(
+    body: OrderCreateParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<Shared.Order> {
     return this._client.post('/store/order', { body, ...options });
   }
 
@@ -46,7 +49,10 @@ export class Orders extends APIResource {
    * ```
    */
   delete(orderID: number, options?: RequestOptions): APIPromise<void> {
-    return this._client.delete(path`/store/order/${orderID}`, { ...options, headers: buildHeaders([{Accept: '*/*'}, options?.headers]) });
+    return this._client.delete(path`/store/order/${orderID}`, {
+      ...options,
+      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
+    });
   }
 }
 
@@ -68,7 +74,5 @@ export interface OrderCreateParams {
 }
 
 export declare namespace Orders {
-  export {
-    type OrderCreateParams as OrderCreateParams
-  };
+  export { type OrderCreateParams as OrderCreateParams };
 }
