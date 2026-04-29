@@ -84,7 +84,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       java: {
         method: 'pets().update',
         example:
-          'package com.yolken.api.example;\n\nimport com.yolken.api.client.YolkenTest6Client;\nimport com.yolken.api.client.okhttp.YolkenTest6OkHttpClient;\nimport com.yolken.api.models.pets.Pet;\nimport com.yolken.api.models.pets.PetUpdateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        YolkenTest6Client client = YolkenTest6OkHttpClient.fromEnv();\n\n        Pet params = Pet.builder()\n            .name("doggie")\n            .addPhotoUrl("string")\n            .build();\n        Pet pet = client.pets().update(params);\n    }\n}',
+          'package com.yolken.api.example;\n\nimport com.yolken.api.client.YolkenTest6Client;\nimport com.yolken.api.client.okhttp.YolkenTest6OkHttpClient;\nimport com.yolken.api.models.pets.Pet;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        YolkenTest6Client client = YolkenTest6OkHttpClient.fromEnv();\n\n        Pet params = Pet.builder()\n            .name("doggie")\n            .addPhotoUrl("string")\n            .build();\n        Pet pet = client.pets().update(params);\n    }\n}',
       },
       go: {
         method: 'client.Pets.Update',
@@ -131,7 +131,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       java: {
         method: 'pets().create',
         example:
-          'package com.yolken.api.example;\n\nimport com.yolken.api.client.YolkenTest6Client;\nimport com.yolken.api.client.okhttp.YolkenTest6OkHttpClient;\nimport com.yolken.api.models.pets.Pet;\nimport com.yolken.api.models.pets.PetCreateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        YolkenTest6Client client = YolkenTest6OkHttpClient.fromEnv();\n\n        Pet params = Pet.builder()\n            .name("doggie")\n            .addPhotoUrl("string")\n            .build();\n        Pet pet = client.pets().create(params);\n    }\n}',
+          'package com.yolken.api.example;\n\nimport com.yolken.api.client.YolkenTest6Client;\nimport com.yolken.api.client.okhttp.YolkenTest6OkHttpClient;\nimport com.yolken.api.models.pets.Pet;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        YolkenTest6Client client = YolkenTest6OkHttpClient.fromEnv();\n\n        Pet params = Pet.builder()\n            .name("doggie")\n            .addPhotoUrl("string")\n            .build();\n        Pet pet = client.pets().create(params);\n    }\n}',
       },
       go: {
         method: 'client.Pets.New',
