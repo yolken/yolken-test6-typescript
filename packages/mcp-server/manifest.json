@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/yolken-test6-typescript.git"
+    "url": "git+https://github.com/yolken/yolken-test6-typescript.git"
   },
-  "homepage": "https://github.com/stainless-sdks/yolken-test6-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/yolken/yolken-test6-typescript/tree/main/packages/mcp-server#readme",
   "documentation": "http://example16.com",
   "server": {
     "type": "node",
