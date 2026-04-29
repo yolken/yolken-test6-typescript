@@ -42,14 +42,14 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/yolken-test6-typescript.git
+$ npm install git+ssh://git@github.com:yolken/yolken-test6-typescript.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/yolken-test6-typescript
+$ git clone https://www.github.com/yolken/yolken-test6-typescript
 $ cd yolken-test6-typescript
 
 # With yarn
