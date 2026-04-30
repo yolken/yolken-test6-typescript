@@ -9,7 +9,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/yolken-test6-typescript.git
+git clone git@github.com:yolken/yolken-test6-typescript.git
 cd yolken-test6-typescript
 ./scripts/bootstrap
 ./scripts/build
