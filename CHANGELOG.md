@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.2.0 (2026-05-01)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/yolken/yolken-test6-typescript/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* **api:** manual updates ([16dd452](https://github.com/yolken/yolken-test6-typescript/commit/16dd452ea6440d2380c3b6eced38e973b26bf5c7))
+
+
+### Chores
+
+* **internal:** fix MCP cloudflare worker builds ([d440c45](https://github.com/yolken/yolken-test6-typescript/commit/d440c4529723a6940af12c3968e5ad0e2025b141))
+
 ## 0.1.0 (2026-04-30)
 
 Full Changelog: [v0.0.1...v0.1.0](https://github.com/yolken/yolken-test6-typescript/compare/v0.0.1...v0.1.0)
