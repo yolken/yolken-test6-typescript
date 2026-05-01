@@ -1,6 +1,6 @@
 {
   "name": "yolken-test6-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The official MCP Server for the Yolken Test6 API",
   "author": "Yolken Test6 <benjamin3@stainless.com>",
   "types": "dist/index.d.ts",
