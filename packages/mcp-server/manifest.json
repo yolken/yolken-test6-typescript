@@ -12,7 +12,7 @@
     "url": "git+https://github.com/yolken/yolken-test6-typescript.git"
   },
   "homepage": "https://github.com/yolken/yolken-test6-typescript/tree/main/packages/mcp-server#readme",
-  "documentation": "http://example16.com",
+  "documentation": "http://example17.com",
   "server": {
     "type": "node",
     "entry_point": "index.js",
