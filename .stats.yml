@@ -1,4 +1,4 @@
 configured_endpoints: 19
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/yolken-inc-dash/yolken-test6-21652c2d2e6a5aab678ca435ba09ef698ff34270021f349660b84d5d98bf3923.yml
-openapi_spec_hash: 356a7298b2abac3fdf72ad5ee046b952
-config_hash: 35cbcdef6126c5b84e6b237d5cfaada5
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/yolken-inc-dash/yolken-test6-9987d7699349afb3dc3e46d6246c42aa5a26fdfb93e51bf94f3160d2531bb4b0.yml
+openapi_spec_hash: 9ac9d43092b1fc1701d29cb14892d0ca
+config_hash: e762af3cce7b76a4f96fd456ab6e5958
