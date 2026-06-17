@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.2.0 (2026-06-17)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/yolken/yolken-test6-typescript/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* **api:** manual updates ([3cac77c](https://github.com/yolken/yolken-test6-typescript/commit/3cac77c6d4fb60730d9defd2de41a6c3c15e5f9c))
+* **api:** manual updates ([d12ecc9](https://github.com/yolken/yolken-test6-typescript/commit/d12ecc92ce757fcc98ce662b10f6b19c0ad9b58a))
+* **api:** manual updates ([9c23fd9](https://github.com/yolken/yolken-test6-typescript/commit/9c23fd935d88b75d85aaa4297a40c71d016401be))
+* **api:** manual updates ([a470848](https://github.com/yolken/yolken-test6-typescript/commit/a470848938b4ae16c75e9146fae606465dafbb99))
+* **api:** manual updates ([16dd452](https://github.com/yolken/yolken-test6-typescript/commit/16dd452ea6440d2380c3b6eced38e973b26bf5c7))
+
+
+### Bug Fixes
+
+* **client:** send content-type header for requests with an omitted optional body ([f66b08d](https://github.com/yolken/yolken-test6-typescript/commit/f66b08db4ae693b20bc762da87ad0c78ff513f25))
+* **typescript:** upgrade tsc-multi so that it works with Node 26 ([a71b04e](https://github.com/yolken/yolken-test6-typescript/commit/a71b04e5db820aa3a495a8b0c9e6edfb7893d620))
+
+
+### Chores
+
+* **internal:** codegen related update ([410d932](https://github.com/yolken/yolken-test6-typescript/commit/410d93205ec576098f25e2378fcc06bb11a68c72))
+* **internal:** fix MCP cloudflare worker builds ([d440c45](https://github.com/yolken/yolken-test6-typescript/commit/d440c4529723a6940af12c3968e5ad0e2025b141))
+* **internal:** fix MCP cloudflare worker initialization ([e8c2055](https://github.com/yolken/yolken-test6-typescript/commit/e8c20553888249810c7d039c2d2d135f12b8ac3a))
+* **tests:** remove redundant File import ([badf102](https://github.com/yolken/yolken-test6-typescript/commit/badf1025681b141ec94e50eca45ee6bd1430c696))
+
+
+### Documentation
+
+* clarify forwards compat behavior ([e50a110](https://github.com/yolken/yolken-test6-typescript/commit/e50a110f932e5d79757f72d13b7eede5a7cfb718))
+* update logging docs ([b05c88c](https://github.com/yolken/yolken-test6-typescript/commit/b05c88c7958332d2de3c16e2e85e33dbc6c8cad7))
+* update with proxy auth info ([578080a](https://github.com/yolken/yolken-test6-typescript/commit/578080a37ea5ffad74477e92aaecac22ea27742a))
+
 ## 0.1.0 (2026-04-30)
 
 Full Changelog: [v0.0.1...v0.1.0](https://github.com/yolken/yolken-test6-typescript/compare/v0.0.1...v0.1.0)
